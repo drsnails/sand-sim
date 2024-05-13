@@ -42,6 +42,12 @@ function renderGrid() {
 
 }
 
+function toggleColors() {
+    gIsRainbow = !gIsRainbow
+    gHue = gIsRainbow ? 185 : 50
+    bgColor = [200, 255, gIsRainbow ? 0 : 210]
+}
+
 function calculateNextGen() {
     let nextGrid = createNewGrid(gGrid)
     for (let i = 0; i < gLength - 1; i++) {
